@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="classicmodels" dynamic-insert="false" dynamic-update="false" mutable="true" name="model.Student" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="student">
+        <id name="studentId" type="int">
+            <column name="studentID"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="name" optimistic-lock="true" type="string" unique="false">
+            <column length="60" name="name" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="address" optimistic-lock="true" type="string" unique="false">
+            <column length="80" name="address" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
